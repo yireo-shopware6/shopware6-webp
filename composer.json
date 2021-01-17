@@ -1,0 +1,17 @@
+{
+  "name": "yireo/shopware6-webp",
+  "description": "Shopware 6 plugin for adding WebP support",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Yireo\\Webp\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Yireo\\Webp\\YireoWebp",
+    "label": {
+      "en-GB": "Webp plugin"
+    }
+  }
+}

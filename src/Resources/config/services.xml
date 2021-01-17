@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="Yireo\Webp\Twig\WebpExtension">
+            <tag name="twig.extension"/>
+            <argument type="service" id="Yireo\Webp\Twig\WebpConvertor"/>
+        </service>
+
+        <service id="Yireo\Webp\Twig\WebpConvertor" lazy="true">
+            <argument type="service" id="kernel" key="$kernel"/>
+        </service>
+    </services>
+</container>
