@@ -1,16 +1,17 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\Webp\Twig;
+namespace Yireo\Webp\Twig\Extension;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
+use Yireo\Webp\Util\WebpConvertor;
 
 class WebpExtension extends AbstractExtension
 {
     /**
      * @var WebpConvertor
      */
-    private WebpConvertor $webpConvertor;
+    private $webpConvertor;
 
     /**
      * WebpExtension constructor.
@@ -28,7 +29,7 @@ class WebpExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('webp', [$this->webpConvertor, 'convert']),
+            new TwigFilter('webp', [$this->webpConvertor, 'convertImageUrl']),
         ];
     }
 }

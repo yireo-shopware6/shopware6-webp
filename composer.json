@@ -8,6 +8,9 @@
       "Yireo\\Webp\\": "src/"
     }
   },
+  "require": {
+    "rosell-dk/webp-convert": "^2.4"
+  },
   "extra": {
     "shopware-plugin-class": "Yireo\\Webp\\YireoWebp",
     "label": {
