@@ -3,15 +3,15 @@
 namespace Yireo\Webp\Util;
 
 use League\Flysystem\FileNotFoundException;
-use Shopware\Production\Kernel;
 use Symfony\Component\Asset\UrlPackage;
+use Symfony\Component\HttpKernel\KernelInterface;
 use WebPConvert\Convert\Exceptions\ConversionFailedException;
 use WebPConvert\WebPConvert;
 
 class WebpConvertor
 {
     /**
-     * @var Kernel
+     * @var KernelInterface
      */
     private $kernel;
 
@@ -22,11 +22,11 @@ class WebpConvertor
 
     /**
      * WebpConvertor constructor.
-     * @param Kernel $kernel
+     * @param KernelInterface $kernel
      * @param UrlPackage $urlPackage
      */
     public function __construct(
-        Kernel $kernel,
+        KernelInterface $kernel,
         UrlPackage $urlPackage
     ) {
         $this->kernel = $kernel;
